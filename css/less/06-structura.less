@@ -625,8 +625,15 @@ html {
 				}
 			}
 			&:hover, &.active {
+				color: var(--clr-light);
+				&.button-clear {
+					color: var(--clr-light);
+				}
 				.button-title {
-					border-bottom-color: var(--clr-att);
+					//border-bottom-color: var(--clr-att);
+					&:before {
+						opacity: 0.6;
+					}
 				}
 			}
 			&.active {
