@@ -1,0 +1,123 @@
+/* ----------------------------------- *\
+			forms elements styles
+\* ----------------------------------- */
+.frm-row,
+.frm-field,
+.frm-row-submit {
+    display: flex;
+    flex-wrap: wrap;
+	position: relative;
+	line-height: 1;
+}
+.frm-field {
+    display: block;
+    width: 100%;
+}
+.frm-select {
+	position: relative;
+	display: block;
+	overflow: hidden;
+    line-height: 1;
+	input {
+		display: block;
+		position: absolute;
+		top: 0;left: 0;
+		width: 0;height: 0;
+		opacity: 0;
+		margin: 0;
+		padding: 0;
+		&:checked {
+			&~label {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	label {
+		display: block;
+		position: relative;
+		cursor: pointer;
+        &:before, &:after {
+            content: "";
+            display: block;
+            position: absolute;
+        }
+		&:after {
+			opacity: 0;
+		}
+	}
+}
+
+
+.frm-select {
+	input {
+		&:checked {
+			&~label {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	label {
+		&:before, &:after {
+			
+		}
+		&:after {
+			border-radius: 0;
+			border: none;
+			background: url(../img/icons/chk.svg) center / 24px auto no-repeat;
+			opacity: 0;
+		}
+	}
+	a {
+		color: inherit;
+		&:hover {
+			color: var(--clr-att);
+		}
+	}
+}
+.frm-field-input-action {
+	position: relative;
+	line-height: 1;
+	.button-field-clear {
+		width: 24px;height: 24px;
+		z-index: 3;
+		cursor: pointer;
+		position: absolute;
+		top: 50%;right: 20px;
+		margin-top: -12px;
+		display: none;
+	}
+	&.inp-valid {
+		.button-field-clear {
+			display: block;
+		}
+	}
+}
+.frm-main-search {
+	position: relative;
+	line-height: 1;
+	.form-input {
+		height: 42px;
+		border-radius: 0;
+		border: 1px solid var(--clr-border);
+		background-color: #fff;
+		padding-left: 44px;
+		background-image: url(../img/icons/search-light.svg);
+		background-repeat: no-repeat;
+		background-size: 24px auto;
+		background-position: 12px center;
+		font-size: 16px;
+		letter-spacing: -0.16px;
+		color: var(--clr-base);
+		.fi;
+	}
+}
+@media (min-width: 1024px) {
+	.frm-main-search {
+		.form-input {
+		}
+	}
+}
