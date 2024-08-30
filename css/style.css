@@ -1032,6 +1032,9 @@ html {
         flex: 1;
     margin-bottom: 4rem;
   }
+  .popup-catalog-wrap .menu > li:first-child {
+    min-width: 240px;
+  }
   .popup-catalog-wrap .menu-list {
     display: -ms-flexbox;
     display: flex;
