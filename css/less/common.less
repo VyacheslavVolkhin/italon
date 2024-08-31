@@ -79,7 +79,7 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-	margin: 0 -8px -16px -18px;
+	margin: 0 -8px -16px -8px;
 }
 .item-wrap, .tile-item-wrap {
     width: 100%;
@@ -276,6 +276,11 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 		z-index: 2;
 	}
 }
+@media (min-width: 640px) {
+	.item-wrap {
+		width: 50%;
+	}
+}
 @media (min-width: 768px) {
 	.slider-actions-wrap {
 		bottom: auto;
@@ -296,6 +301,9 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 		padding: 0 12px;
 		margin-bottom: 24px;
 	}
+	.item-wrap {
+		width: 33.33%;
+	}
 	.slider-wrap {
 		margin: 0 -12px;
 	}
@@ -304,5 +312,10 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 	}
 	.slider-actions-wrap {
 		width: 104px;
+	}
+}
+@media (min-width: 1200px) {
+	.item-wrap {
+		width: 25%;
 	}
 }

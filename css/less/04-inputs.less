@@ -10,6 +10,22 @@
 }
 .form-input {
     text-overflow: ellipsis;
+	height: 40px;
+	border: 1px solid var(--clr-att);
+	color: var(--clr-base);
+	background: none;
+	padding: 0 15px;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: -0.01em;
+	&.inp-light {
+		color: #fff;
+		border-color: #fff;
+		&[placeholder]::-webkit-input-placeholder {color: #fff;}
+		&[placeholder]:-moz-placeholder {color: #fff;}
+		&[placeholder]::-moz-placeholder {color: #fff;}
+		&[placeholder]:-ms-input-placeholder {color: #fff;}
+	}
 }
 textarea.form-input {
 
@@ -74,6 +90,35 @@ select.form-input:required:invalid {
 	&:hover {
 		color: #fff;
 	}
+	&.button-plus, &.button-minus {
+		min-width: 0;
+		padding: 0;
+		&:before, &:after {
+			content: "";
+			display: block;
+			width: 16px;height: 2px;
+			background: #fff;
+			position: absolute;
+			top: 50%;left: 50%;
+			background: #fff;
+			margin: -1px 0 0 -8px;
+		}
+		&.button-light {
+			&:before, &:after {
+				background-color: var(--clr-title);
+			}
+			&:hover {
+				&:before, &:after {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+	&.button-plus {
+		&:before {
+			rotate: 90deg;
+		}
+	}
 	&.button-light {
 		&:not(:hover) {
 			background-color: #fff;
@@ -106,12 +151,38 @@ select.form-input:required:invalid {
 			filter: none
 		}
 	}
+	&.button-tag, &.button-category {
+		height: 24px;
+		padding: 0 7px;
+		border-radius: 12px;
+		font-size: 12px;
+		font-weight: 400;
+		letter-spacing: -0.01em;
+		flex-shrink: 0;
+	}
+	&.button-category {
+		border-radius: 0;
+		height: 32px;
+		font-size: 14px;
+		font-weight: 500;
+	}
     &.button-border {
         &:not(:hover) {
             background-color: transparent;
             color: var(--clr-att);
 			.button-ico {
 				filter: none;
+			}
+			&.button-arrow {
+				&:after {
+					filter: none;
+				}
+			}
+			&.button-light {
+				color: #fff;
+				.button-ico, &:after {
+					filter: brightness(0) invert(1);
+				}
 			}
         }
     }
@@ -128,6 +199,14 @@ select.form-input:required:invalid {
 			margin-left: 2px;
 			filter: brightness(0) invert(1);
 		}
+	}
+	.button-title {
+		flex: 1;
+		position: relative;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
     .button-ico {
         width: 20px;
@@ -253,8 +332,12 @@ select.form-input:required:invalid {
         }
 		&.swiper-button-disabled {
 			pointer-events: none;
-			opacity: 0;
-			z-index: -99;
+			&.button-border {
+				border-color: var(--clr-border);
+				&:before {
+					opacity: 0.2;
+				}
+			}
 		}
 		&.button-border {
 			&:hover {
@@ -287,6 +370,41 @@ select.form-input:required:invalid {
 	&.ico-fav {
 		&:before {
 			background-image: url(../img/icons/fav.svg);
+		}
+		&:after {
+			background-image: url(../img/icons/fav-active.svg);
+			opacity: 0;
+			background-size: 26px auto;
+		}
+		&.active {
+			&:before {
+				opacity: 0;
+			}
+			&:after {
+				opacity: 1;
+			}
+		}
+		&.button-toggle {
+			width: 34px;height: 34px;
+			border-radius: 50%;
+			border: 1px solid var(--clr-border);
+			background: #fff;
+			&:before {
+				background-size: 22px auto;
+			}
+			&:after {
+				background-size: 24px auto;
+			}
+			&:hover {
+				border: 1px solid var(--clr-border);
+				background: #fff;
+				&:before {
+					opacity: 0;
+				}
+				&:after {
+					opacity: 1;
+				}
+			}
 		}
 	}
 	&.ico-search {
@@ -390,6 +508,9 @@ select.form-input:required:invalid {
 }
 @media (max-width: 1023px) {
 	.btn {
+		&.button-small {
+			height: 36px;
+		}
 		.button-counter {
 			min-width: 12px;
 			height: 12px;
@@ -401,6 +522,13 @@ select.form-input:required:invalid {
 	}
 }
 @media (min-width: 1024px) {
+	.form-input {
+		height: 48px;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+		letter-spacing: normal;
+	}
 	.btn {
 		height: 48px;
 		font-size: 16px;

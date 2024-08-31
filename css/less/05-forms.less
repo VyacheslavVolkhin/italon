@@ -1,6 +1,67 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.frm-select-panel {
+	display: flex;
+	.frm-select-button {
+		width: auto;
+		flex: 1;
+		&:not(:first-child) {
+			label {
+				border-left: none;
+			}
+		}
+	}
+}
+.frm-field-counter {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	height: 42px;
+	border: 1px solid var(--clr-border);
+	padding: 0 52px;
+	background: #fff;
+	.form-input {
+		display: block;
+		height: 40px;
+		border: none;
+		text-align: center;
+		padding: 0;
+		font-size: 16px;
+		line-height: 40px;
+		font-weight: 500;
+		color: var(--clr-title);
+
+	}
+	.btn {
+		width: 52px;height: 40px;
+		position: absolute;
+		top: 0;left: 0;
+	}
+	.button-plus {
+		left: auto;
+		right: 0;
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	input[type=number]{
+		-moz-appearance: textfield;
+	}
+	.form-input-unit, .form-input-value {
+		display: inline;
+	}
+	.form-input-unit {
+		margin-left: 5px;
+	}
+}
+.frm-content {
+	&:not(.active) {
+		display: none;
+	}
+}
 .frm-row,
 .frm-field,
 .frm-row-submit {
@@ -13,7 +74,7 @@
     display: block;
     width: 100%;
 }
-.frm-select {
+.frm-select, .frm-select-button {
 	position: relative;
 	display: block;
 	overflow: hidden;
@@ -49,8 +110,54 @@
 	}
 }
 
-
+.frm-select-button {
+	line-height: 1;
+	flex-shrink: 0;
+	label {
+		display: block;
+		height: 32px;
+		border: 1px solid var(--clr-border);
+		text-align: center;
+		line-height: 30px;
+		background: #fff;
+		transition: all ease 0.2s;
+		font-size: 14px;
+		color: var(--clr-light);
+		font-weight: 500;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		cursor: pointer;
+		&:hover {
+			color: var(--clr-base-dark);
+		}
+	}
+	input {
+		&:checked {
+			&~label {
+				background-color: #E4E4E4;
+				color: var(--clr-base-dark);
+			}
+		}
+	}
+}
 .frm-select {
+	&.inp-light {
+		color: #fff;
+		label {
+			&:before {
+				border-color: #fff;
+			}
+			&:after {
+				filter: brightness(0) invert(1);
+			}
+		}
+		a {
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
 	input {
 		&:checked {
 			&~label {
@@ -61,8 +168,22 @@
 		}
 	}
 	label {
+		min-height: 24px;
+		font-size: 12px;
+		line-height: 16px;
+		letter-spacing: -0.01em;
+		padding-left: 36px;
+		display: flex;
+		align-items: center;
 		&:before, &:after {
-			
+			content: "";
+			display: block;
+			width: 20px;height: 20px;
+			position: absolute;
+			top: 12px;
+			left: 12px;
+			margin: -10px 0 0 -10px;
+			border: 1px solid var(--clr-base);
 		}
 		&:after {
 			border-radius: 0;
