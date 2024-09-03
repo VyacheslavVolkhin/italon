@@ -1238,10 +1238,40 @@ html {
   padding-bottom: 12px;
   padding-top: 12px;
 }
+.item-tile-catalog .tile-total-wrap {
+  display: block;
+  -ms-flex: 1;
+      flex: 1;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #676767;
+  font-weight: 400;
+  font-family: var(--font-family);
+}
+.item-tile-catalog .tile-total-wrap * {
+  font-family: var(--font-family);
+}
+.item-tile-catalog .tile-total-wrap .tile-price {
+  font-weight: 600;
+  font-size: 1em;
+  line-height: inherit;
+  color: var(--clr-title);
+}
+.item-tile-catalog .tile-total-title {
+  margin-bottom: 2px;
+  font-weight: 400;
+}
 .item-tile-catalog .tile-cart-wrap {
   padding-bottom: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .item-tile-catalog .tile-cart-wrap .btn {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   z-index: 8;
 }
 .item-tile-catalog .tile-photo-wrap {
