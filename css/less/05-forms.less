@@ -74,9 +74,10 @@
     display: block;
     width: 100%;
 }
-.frm-select, .frm-select-button {
+.frm-select, .frm-select-button, .frm-select-color, .frm-select-button-small {
 	position: relative;
 	display: block;
+	flex-shrink: 0;
 	overflow: hidden;
     line-height: 1;
 	input {
@@ -109,7 +110,25 @@
 		}
 	}
 }
-
+.frm-select-color {
+	flex-shrink: 0;
+	display: block;
+	width: 24px;height: 24px;
+	overflow: hidden;
+	label {
+		padding: 0;
+		width: 100%;
+		height: 24px;
+		cursor: pointer;
+	}
+	.elm-ico {
+		width: 24px;height: 24px;
+		border-radius: 50%;
+		img, svg {
+			width: 100%;
+		}
+	}
+}
 .frm-select-button {
 	line-height: 1;
 	flex-shrink: 0;
@@ -140,6 +159,37 @@
 			}
 		}
 	}
+}
+.frm-select-button-small {
+	input {
+		&:checked {
+			&~label {
+				background-color: #091119;
+				color: #fff;
+			}
+		}
+	}
+	label {
+		height: 24px;
+		line-height: 22px;
+		border: 1px solid #091119;
+		transition: all ease 0.2s;
+		padding: 0 7px;
+		border-radius: 12px;
+		font-size: 12px;
+		letter-spacing: -0.01em;
+		color: #091119;
+		max-width: 100%;
+		position: relative;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		text-align: center;
+		&:hover {
+			background-color: #091119;
+			color: #fff;
+		}
+	}	
 }
 .frm-select {
 	&.inp-light {

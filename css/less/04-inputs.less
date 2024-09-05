@@ -35,7 +35,7 @@ select.form-input {
     text-overflow: ellipsis;
     width: 100%;
     padding-right: 30px;
-    background-image: url(../img/icons/arrow-select.svg);
+    background-image: url(../img/icons/arrow-menu.svg);
     background-position: right 20px center;
     background-color: #fff;
     background-repeat: no-repeat;
@@ -59,11 +59,11 @@ select.form-input {
         vertical-align: middle;
         font-size: 1em;
         line-height: inherit;
-        padding: 0 16px 0 0;
+        padding: 0 24px 0 0;
         color: inherit;
         font-weight: bold;
-        background-image: url(../img/icons/arrow-select.png);
-        background-size: 8px auto;
+        background-image: url(../img/icons/arrow-menu.svg);
+        background-size: 20px auto;
         background-repeat: no-repeat;
         background-position: right center;
     }
@@ -89,6 +89,22 @@ select.form-input:required:invalid {
 	color: #fff;
 	&:hover {
 		color: #fff;
+	}
+	&.button-tab {
+		border-color: var(--clr-border);
+		background-color: #fff;
+		color: var(--clr-att);
+		.button-ico {
+			filter: none;
+		}
+		&:hover, &.active {
+			background-color: #091119;
+			border-color: var(--clr-border);
+			color: #fff;
+			.button-ico {
+				filter: brightness(0) invert(1);
+			}
+		}
 	}
 	&.button-plus, &.button-minus {
 		min-width: 0;
@@ -367,7 +383,7 @@ select.form-input:required:invalid {
 			background-image: url(../img/icons/phone.svg);
 		}
 	}
-	&.ico-fav {
+	&.ico-fav, &.ico-zoom {
 		&:before {
 			background-image: url(../img/icons/fav.svg);
 		}
@@ -405,6 +421,11 @@ select.form-input:required:invalid {
 					opacity: 1;
 				}
 			}
+		}
+	}
+	&.ico-zoom {
+		&:before, &:after {
+			background-image: url(../img/icons/scale.svg);
 		}
 	}
 	&.ico-search {
