@@ -1,6 +1,43 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.result-info-box {
+	padding-top: 8px;
+	text-align: center;
+	.info-inner-wrap {
+		margin-bottom: 24px;
+	}
+	.actions-inner-wrap {
+		display: flex;
+		margin: 0 -1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.action-wrap {
+		padding: 0 1rem;
+		flex-shrink: 0;
+		max-width: 100%;
+		margin-bottom: 2rem;
+	}
+	.btn {
+		
+	}
+	.h2-title {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: (586/24em);
+	}
+}
+.search-box {
+	margin-bottom: 32px;
+}
+.load-box {
+	padding: 68px 0;
+	.elm-ico {
+		width: 8rem;height: 8rem;
+		margin: 0 auto;
+	}
+}
 .features-info-card-box {
 	.info-wrap {
 		padding: 16px var(--paddingContainer);
@@ -993,6 +1030,9 @@
 		display: flex;
 		align-items: flex-start;
 		margin-bottom: 24px;
+		&+.search-box {
+			margin-top: -16px;
+		}
 		.action-wrap {
 			display: block;
 			flex-shrink: 0;
@@ -1143,6 +1183,7 @@
 			margin-bottom: 2.4rem;
 			width: 33.33%
 		}
+		
 	}
 	.tiles-catalog-box {
 		.item-wrap {
@@ -1393,6 +1434,11 @@
 	.tile-catalog-box {
 		.item-wrap {
 			width: 25%
+		}
+		.col-3 {
+			.item-wrap {
+				width: 33.33%;
+			}
 		}
 	}
 }

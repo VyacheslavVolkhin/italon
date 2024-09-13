@@ -31,7 +31,6 @@
 		line-height: 40px;
 		font-weight: 500;
 		color: var(--clr-title);
-
 	}
 	.btn {
 		width: 52px;height: 40px;
@@ -264,6 +263,19 @@
 	&.inp-valid {
 		.button-field-clear {
 			display: block;
+		}
+	}
+}
+.frm-main-button {
+	display: flex;
+	.field-input {
+		flex: 1;
+		padding: 0 1.6rem 0 0;
+	}
+	.field-button {
+		flex-shrink: 0;
+		.btn {
+
 		}
 	}
 }

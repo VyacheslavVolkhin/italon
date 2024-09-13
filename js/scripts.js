@@ -152,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 // field counter
 const inputCounters = document.querySelectorAll(".js-input-counter");
 const plusButtons = document.querySelectorAll(".js-button-counter-plus");

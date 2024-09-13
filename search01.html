@@ -18,9 +18,9 @@
     <script src="./js/scripts.js" defer></script>
 </head>
 
-<body>
+<body class="">
     <!-- wrap -->
-    <div class="wrap">
+    <div class="wrap wrap-header-noborder">
 
 
         <!-- header -->
@@ -294,18 +294,41 @@
 
         <!-- page -->
         <div class="page-full">
-            <br><br><br><br><br>
-            <ul>
-                <li><a href="main.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="card.html">Карточка коллекции</a></li>
-                <li><a href="card-plitka.html">Карточка товара (плитка)</a></li>
-                <li><a href="search01.html">Поиск загрузка</a></li>
-                <li><a href="search02.html">Поиск с результатами</a></li>
-                <li><a href="search03.html">Поиск не дал результатов</a></li>
-                <li>--------</li>
-            </ul>
-            <br><br><br><br><br>
+
+            <!--title-box-->
+            <div class="title-box">
+                <div class="title-wrap">
+                    <h1 class="h1-title">Результаты поиска</h1>
+                </div>
+            </div>
+            <!--/title-box-->
+
+            <!--search-box-->
+            <div class="search-box">
+                <form action="/" class="frm-main-button">
+                    <div class="field-input">
+                        <div class="frm-field-input-action">
+                            <input type="text" class="form-input" placeholder="Керамогранит">
+                            <div class="btn-action-ico ico-clear button-field-clear"></div>
+                        </div>
+                    </div>
+                    <div class="field-button">
+                        <button type="submit" class="btn">Искать</button>
+                    </div>
+                </form>
+            </div>
+            <!--/search-box-->
+
+            <!--load-box-->
+            <div class="load-box">
+                <div class="elm-ico">
+                    <img src="./img/icons/loader.svg" alt="">
+                </div>
+            </div>
+            <!--/load-box-->
+
+
+
         </div>
         <!-- /page -->
 
@@ -419,7 +442,6 @@
 
     </div>
     <!-- /wrap -->
-
 
 
 

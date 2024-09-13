@@ -227,6 +227,14 @@ h1 {
   letter-spacing: -0.01em;
   font-weight: 500;
 }
+.h2-title,
+h2 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
 .text-att,
 .title-att {
   color: var(--clr-att);
@@ -508,6 +516,9 @@ html {
 }
 .footer a:not(.btn):hover {
   color: rgba(255, 255, 255, 0.6);
+}
+.wrap-header-noborder .header {
+  border-bottom: none;
 }
 .header {
   z-index: 99;
@@ -1887,6 +1898,50 @@ html {
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.result-info-box {
+  padding-top: 8px;
+  text-align: center;
+}
+.result-info-box .info-inner-wrap {
+  margin-bottom: 24px;
+}
+.result-info-box .actions-inner-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -10px;
+  margin: 0 -1rem;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.result-info-box .action-wrap {
+  padding: 0 10px;
+  padding: 0 1rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+}
+.result-info-box .h2-title {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 24.41666667em;
+}
+.search-box {
+  margin-bottom: 32px;
+}
+.load-box {
+  padding: 68px 0;
+}
+.load-box .elm-ico {
+  width: 80px;
+  width: 8rem;
+  height: 80px;
+  height: 8rem;
+  margin: 0 auto;
+}
 .features-info-card-box .info-wrap {
   padding: 16px var(--paddingContainer);
   background-color: #F1F8FF;
@@ -2908,6 +2963,9 @@ html {
         align-items: flex-start;
     margin-bottom: 24px;
   }
+  .title-box + .search-box {
+    margin-top: -16px;
+  }
   .title-box .action-wrap {
     display: block;
     -ms-flex-negative: 0;
@@ -3273,6 +3331,9 @@ html {
   }
   .tile-catalog-box .item-wrap {
     width: 25%;
+  }
+  .tile-catalog-box .col-3 .item-wrap {
+    width: 33.33%;
   }
 }
 /* ----------------------------------- *\
@@ -4124,6 +4185,20 @@ select.form-input:required:invalid {
 }
 .frm-field-input-action.inp-valid .button-field-clear {
   display: block;
+}
+.frm-main-button {
+  display: -ms-flexbox;
+  display: flex;
+}
+.frm-main-button .field-input {
+  -ms-flex: 1;
+      flex: 1;
+  padding: 0 16px 0 0;
+  padding: 0 1.6rem 0 0;
+}
+.frm-main-button .field-button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 .frm-main-search {
   position: relative;
