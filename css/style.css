@@ -3199,6 +3199,7 @@ html {
       -ms-grid-columns: 2fr 1fr 2fr;
           grid-template-columns: 2fr 1fr 2fr;
       margin-bottom: -24px;
+      transform: none !important;
     }
     .tiles-slider-box.slider-categories .sl-wrap {
       width: 100% !important;
