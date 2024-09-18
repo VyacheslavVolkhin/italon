@@ -1898,6 +1898,39 @@ html {
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.info-error-box {
+  text-align: center;
+  color: var(--clr-title);
+  margin: 0 auto 100px auto;
+  margin: 0 auto 10rem auto;
+  max-width: 34.44444444em;
+}
+.info-error-box:has(.elm-photo) {
+  padding-top: 35px;
+}
+.info-error-box .error-title {
+  display: block;
+  font-size: 10em;
+  font-weight: bold;
+  line-height: 1.1;
+}
+.info-error-box .error-title-info {
+  color: #21272A;
+  font-size: 2em;
+  line-height: 1.11111111;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+.info-error-box .elm-photo {
+  margin: 0 auto 24px auto;
+  margin: 0 auto 2.4rem auto;
+  width: 320px;
+  width: 32rem;
+}
+.info-error-box .btn {
+  margin-top: 6px;
+}
 .result-info-box {
   padding-top: 8px;
   text-align: center;
