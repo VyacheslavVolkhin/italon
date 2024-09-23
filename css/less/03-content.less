@@ -1,6 +1,85 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.message-box {
+	padding-top: 35px;
+	margin-bottom: 8rem;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	.map-inner-wrap {
+		height: 260px;
+		position: relative;
+		overflow: hidden;
+		background: var(--clr-light);
+		border: 1px solid var(--clr-border);
+		margin-bottom: 24px;
+	}
+	.contacts-inner-wrap {
+		margin-bottom: 32px;
+		a {
+			color: inherit;
+			&:hover {
+				color: var(--clr-att);
+			}
+		}
+	}
+	.info-inner-wrap {
+		margin-bottom: 32px;
+		color: #676767;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		p {
+			max-width: (516/18em);
+		}
+		a {
+			color: inherit;
+			&:hover {
+				color: var(--clr-att);
+			}
+		}
+		.elm-ico {
+			display: block;
+			margin: 0 auto 24px auto;
+			width: 80px;height: 80px;
+			border-radius: 50%;
+			border: 1px solid #000;
+			&.ico-succefull {
+				border-color: #019A00;
+			}
+			&.ico-error {
+				border-color: #f00;
+			}
+			img, svg {
+				max-width: 48px;
+				max-height: 48px;
+			}
+		}
+	}
+	.actions-inner-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1rem;
+	}
+	.action-wrap {
+		padding: 0 1rem;
+		width: 100%;
+		flex-shrink: 0;
+		margin-bottom: 16px;
+	}
+	.btn {
+		width: 100%;
+		height: 48px;
+		font-size: 16px;
+		padding: 0 19px;
+	}
+	.h1-title {
+		color: var(--clr-title);
+		margin: 0 0 16px 0;
+	}
+
+}
 .info-error-box {
 	text-align: center;
 	color: var(--clr-title);
@@ -875,6 +954,30 @@
 	}
 }
 @media (min-width: 768px) {
+	.message-box {
+		padding: 23px 23px 13px 23px;
+		margin: 0 auto 36px auto;
+		max-width: (796/18em);
+		border: 1px solid var(--clr-border);
+		margin-top: 20px;
+		.contacts-inner-wrap {
+			.h1-title {
+				font-size: 24px;
+			}
+		}
+		.info-inner-wrap {
+			.elm-ico {
+				margin: 0 0 12px 0;
+			}
+		}
+		.action-wrap {
+			width: auto;
+			margin-bottom: 10px;
+		}
+		p {
+			margin-bottom: 0.7em;
+		}
+	}
 	.info-card-box {
 		margin-left: -12px;
 		margin-right: -12px;

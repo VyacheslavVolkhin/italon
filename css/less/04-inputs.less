@@ -90,6 +90,19 @@ select.form-input:required:invalid {
 	&:hover {
 		color: #fff;
 	}
+	
+	&.button-gray {
+		&:not(:hover) {
+			background-color: var(--clr-border);
+			border-color: var(--clr-border);
+			color: #fff;
+		}
+		&.button-border {
+			&:not(:hover) {
+				color: var(--clr-light);
+			}
+		}
+	}
 	&.button-tab {
 		border-color: var(--clr-border);
 		background-color: #fff;
