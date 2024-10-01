@@ -67,7 +67,7 @@
                         </a>
                     </div>
                     <div class="action-wrap action-cart">
-                        <a href="" class="btn">
+                        <a href="" class="btn js-popup-open" data-popup="popup-cart">
                             <div class="button-ico">
                                 <img src="./img/icons/cart.svg" alt="">
                             </div>
@@ -439,6 +439,494 @@
             </div>
         </footer>
         <!-- /footer -->
+
+
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-map" id="popup-map">
+            <div class="popup-box">
+                <a href="" class="btn-action-ico ico-close btn-popup-close js-popup-close"></a>
+                <div class="popup-title-wrap">
+                    <div class="popup-title">Зоны доставки</div>
+                    <p>При заказе плитки* подробности уточняйте у менеджеров магазина, но тут лучше расписать более подробно При заказе плитки* подробности уточняйте </p>
+                </div>
+                <div class="popup-content-wrap">
+                    <div class="popup-map-box">
+                        <img src="./img/map.jpg" alt="" class="img-bg-cover">
+                    </div>
+                </div>
+                <div class="popup-footer-wrap">
+                    <div class="actions-inner-wrap">
+                        <div class="action-wrap">
+                            <a href="" class="btn button-border">Закрыть</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-side" id="popup-cart">
+            <div class="popup-box">
+                <a href="" class="btn-action-ico ico-close btn-popup-close js-popup-close"></a>
+                <div class="popup-title-wrap">
+                    <div class="popup-title">Оформление заказа</div>
+                </div>
+                <div class="popup-content-wrap">
+                    <!--tiles-cart-box-->
+                    <div class="tiles-cart-box">
+                        <div class="items-wrap">
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-catalog tile-cart">
+                                    <!-- <a href="" class="tile-link"></a> -->
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-contain">
+                                            <img src="./img/cart.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-top-wrap">
+                                        <div class="tile-sticker">-40%</div>
+                                        <a href="" class="btn-action-ico ico-fav button-toggle js-btn-tgl"></a>
+                                    </div>
+                                    <div class="tile-size-wrap">
+                                        <div class="tile-size">120x60 см</div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-title">Керамогранит Italon Терравива Грэй и очень длинное название, прям очень</div>
+                                        </div>
+                                        <div class="tile-features-wrap">
+                                            <div class="tile-feature-wrap">
+                                                <div class="tile-feature-title">арт. 610015000489</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-title">Цена</div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price-inner">
+                                            <div class="tile-price" data-unit=" ₽/м2">2 200</div>
+                                            <div class="tile-price price-old" data-unit=" ₽ м²  ">30 514</div>
+                                            <div class="tile-sticker">Скидка 40%</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-form-wrap">
+                                        <div class="frm-select-panel">
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat01" id="cat01-01" data-content="cat01-01" checked>
+                                                <label for="cat01-01">м2</label>
+                                            </div>
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat01" id="cat01-02" data-content="cat01-02">
+                                                <label for="cat01-02">штуки</label>
+                                            </div>
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat01" id="cat01-03" data-content="cat01-03">
+                                                <label for="cat01-03">упаковки</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field-counter js-counter">
+                                            <button class="js-button-counter-plus btn button-light button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-light button-minus"></button>
+                                            <div class="form-input">
+                                                <div class="form-input-value js-input-counter">1</div>
+                                                <div class="form-input-unit frm-content" data-content="cat01-01">м2</div>
+                                                <div class="form-input-unit frm-content" data-content="cat01-02">штуки</div>
+                                                <div class="form-input-unit frm-content" data-content="cat01-03">упаковки</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm-info frm-content" data-content="cat01-01">12 шт или 6 упаковок</div>
+                                        <div class="frm-info frm-content" data-content="cat01-02">Доступно на складе 100 штук</div>
+                                        <div class="frm-info frm-content" data-content="cat01-03">Доступно на складе 30 упаковок
+                                        </div>
+                                    </div>
+                                    <div class="tile-total-order-wrap">
+                                        <div class="tile-price-title">Стоимость</div>
+                                        <div class="tile-price" data-unit="₽">22 200</div>
+                                    </div>
+                                    <a href="" class="btn-action-ico button-delete ico-del"></a>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-catalog tile-cart">
+                                    <!-- <a href="" class="tile-link"></a> -->
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-contain">
+                                            <img src="./img/cart.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-top-wrap">
+                                        <div class="tile-sticker">-40%</div>
+                                        <a href="" class="btn-action-ico ico-fav button-toggle js-btn-tgl"></a>
+                                    </div>
+                                    <div class="tile-size-wrap">
+                                        <div class="tile-size">120x60 см</div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-title">Керамогранит Italon Терравива Грэй Керамогранит Italon Терравива Грэй</div>
+                                        </div>
+                                        <div class="tile-features-wrap">
+                                            <div class="tile-feature-wrap">
+                                                <div class="tile-feature-title">арт. 610015000489</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-title">Цена</div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price-inner">
+                                            <div class="tile-price" data-unit=" ₽/м2">2 200</div>
+                                            <div class="tile-price price-old" data-unit=" ₽ м²  ">30 514</div>
+                                            <div class="tile-sticker">Скидка 40%</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-form-wrap">
+                                        <div class="frm-select-panel">
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat02" id="cat02-01" data-content="cat02-01" checked>
+                                                <label for="cat02-01">м2</label>
+                                            </div>
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat02" id="cat02-02" data-content="cat02-02">
+                                                <label for="cat02-02">штуки</label>
+                                            </div>
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat02" id="cat02-03" data-content="cat02-03">
+                                                <label for="cat02-03">упаковки</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field-counter js-counter">
+                                            <button class="js-button-counter-plus btn button-light button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-light button-minus"></button>
+                                            <div class="form-input">
+                                                <div class="form-input-value js-input-counter">1</div>
+                                                <div class="form-input-unit frm-content" data-content="cat02-01">м2</div>
+                                                <div class="form-input-unit frm-content" data-content="cat02-02">штуки</div>
+                                                <div class="form-input-unit frm-content" data-content="cat02-03">упаковки</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm-info frm-content" data-content="cat02-01">12 шт или 6 упаковок</div>
+                                        <div class="frm-info frm-content" data-content="cat02-02">Доступно на складе 100 штук</div>
+                                        <div class="frm-info frm-content" data-content="cat02-03">Доступно на складе 30 упаковок
+                                        </div>
+                                    </div>
+                                    <div class="tile-total-order-wrap">
+                                        <div class="tile-price-title">Стоимость</div>
+                                        <div class="tile-price" data-unit="₽">22 200</div>
+                                    </div>
+                                    <a href="" class="btn-action-ico button-delete ico-del"></a>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-catalog tile-cart">
+                                    <!-- <a href="" class="tile-link"></a> -->
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-contain">
+                                            <img src="./img/cart.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-top-wrap">
+                                        <div class="tile-sticker">-40%</div>
+                                        <a href="" class="btn-action-ico ico-fav button-toggle js-btn-tgl"></a>
+                                    </div>
+                                    <div class="tile-size-wrap">
+                                        <div class="tile-size">120x60 см</div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-title">Керамогранит Italon Терравива Грэй и очень длинное название, прям очень</div>
+                                        </div>
+                                        <div class="tile-features-wrap">
+                                            <div class="tile-feature-wrap">
+                                                <div class="tile-feature-title">арт. 610015000489</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-title">Цена</div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price-inner">
+                                            <div class="tile-price" data-unit=" ₽/м2">2 200</div>
+                                            <div class="tile-price price-old" data-unit=" ₽ м²  ">30 514</div>
+                                            <div class="tile-sticker">Скидка 40%</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-form-wrap">
+                                        <div class="frm-select-panel">
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat01" id="cat01-01" data-content="cat01-01" checked>
+                                                <label for="cat01-01">м2</label>
+                                            </div>
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat01" id="cat01-02" data-content="cat01-02">
+                                                <label for="cat01-02">штуки</label>
+                                            </div>
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat01" id="cat01-03" data-content="cat01-03">
+                                                <label for="cat01-03">упаковки</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field-counter js-counter">
+                                            <button class="js-button-counter-plus btn button-light button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-light button-minus"></button>
+                                            <div class="form-input">
+                                                <div class="form-input-value js-input-counter">1</div>
+                                                <div class="form-input-unit frm-content" data-content="cat01-01">м2</div>
+                                                <div class="form-input-unit frm-content" data-content="cat01-02">штуки</div>
+                                                <div class="form-input-unit frm-content" data-content="cat01-03">упаковки</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm-info frm-content" data-content="cat01-01">12 шт или 6 упаковок</div>
+                                        <div class="frm-info frm-content" data-content="cat01-02">Доступно на складе 100 штук</div>
+                                        <div class="frm-info frm-content" data-content="cat01-03">Доступно на складе 30 упаковок
+                                        </div>
+                                    </div>
+                                    <div class="tile-total-order-wrap">
+                                        <div class="tile-price-title">Стоимость</div>
+                                        <div class="tile-price" data-unit="₽">22 200</div>
+                                    </div>
+                                    <a href="" class="btn-action-ico button-delete ico-del"></a>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-catalog tile-cart">
+                                    <!-- <a href="" class="tile-link"></a> -->
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-contain">
+                                            <img src="./img/cart.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-top-wrap">
+                                        <div class="tile-sticker">-40%</div>
+                                        <a href="" class="btn-action-ico ico-fav button-toggle js-btn-tgl"></a>
+                                    </div>
+                                    <div class="tile-size-wrap">
+                                        <div class="tile-size">120x60 см</div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-title">Керамогранит Italon Терравива Грэй Керамогранит Italon Терравива Грэй</div>
+                                        </div>
+                                        <div class="tile-features-wrap">
+                                            <div class="tile-feature-wrap">
+                                                <div class="tile-feature-title">арт. 610015000489</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-title">Цена</div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price-inner">
+                                            <div class="tile-price" data-unit=" ₽/м2">2 200</div>
+                                            <div class="tile-price price-old" data-unit=" ₽ м²  ">30 514</div>
+                                            <div class="tile-sticker">Скидка 40%</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-form-wrap">
+                                        <div class="frm-select-panel">
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat02" id="cat02-01" data-content="cat02-01" checked>
+                                                <label for="cat02-01">м2</label>
+                                            </div>
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat02" id="cat02-02" data-content="cat02-02">
+                                                <label for="cat02-02">штуки</label>
+                                            </div>
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat02" id="cat02-03" data-content="cat02-03">
+                                                <label for="cat02-03">упаковки</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field-counter js-counter">
+                                            <button class="js-button-counter-plus btn button-light button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-light button-minus"></button>
+                                            <div class="form-input">
+                                                <div class="form-input-value js-input-counter">1</div>
+                                                <div class="form-input-unit frm-content" data-content="cat02-01">м2</div>
+                                                <div class="form-input-unit frm-content" data-content="cat02-02">штуки</div>
+                                                <div class="form-input-unit frm-content" data-content="cat02-03">упаковки</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm-info frm-content" data-content="cat02-01">12 шт или 6 упаковок</div>
+                                        <div class="frm-info frm-content" data-content="cat02-02">Доступно на складе 100 штук</div>
+                                        <div class="frm-info frm-content" data-content="cat02-03">Доступно на складе 30 упаковок
+                                        </div>
+                                    </div>
+                                    <div class="tile-total-order-wrap">
+                                        <div class="tile-price-title">Стоимость</div>
+                                        <div class="tile-price" data-unit="₽">22 200</div>
+                                    </div>
+                                    <a href="" class="btn-action-ico button-delete ico-del"></a>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-catalog tile-cart">
+                                    <!-- <a href="" class="tile-link"></a> -->
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-contain">
+                                            <img src="./img/cart.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-top-wrap">
+                                        <div class="tile-sticker">-40%</div>
+                                        <a href="" class="btn-action-ico ico-fav button-toggle js-btn-tgl"></a>
+                                    </div>
+                                    <div class="tile-size-wrap">
+                                        <div class="tile-size">120x60 см</div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-title">Керамогранит Italon Терравива Грэй и очень длинное название, прям очень</div>
+                                        </div>
+                                        <div class="tile-features-wrap">
+                                            <div class="tile-feature-wrap">
+                                                <div class="tile-feature-title">арт. 610015000489</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-title">Цена</div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price-inner">
+                                            <div class="tile-price" data-unit=" ₽/м2">2 200</div>
+                                            <div class="tile-price price-old" data-unit=" ₽ м²  ">30 514</div>
+                                            <div class="tile-sticker">Скидка 40%</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-form-wrap">
+                                        <div class="frm-select-panel">
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat01" id="cat01-01" data-content="cat01-01" checked>
+                                                <label for="cat01-01">м2</label>
+                                            </div>
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat01" id="cat01-02" data-content="cat01-02">
+                                                <label for="cat01-02">штуки</label>
+                                            </div>
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat01" id="cat01-03" data-content="cat01-03">
+                                                <label for="cat01-03">упаковки</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field-counter js-counter">
+                                            <button class="js-button-counter-plus btn button-light button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-light button-minus"></button>
+                                            <div class="form-input">
+                                                <div class="form-input-value js-input-counter">1</div>
+                                                <div class="form-input-unit frm-content" data-content="cat01-01">м2</div>
+                                                <div class="form-input-unit frm-content" data-content="cat01-02">штуки</div>
+                                                <div class="form-input-unit frm-content" data-content="cat01-03">упаковки</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm-info frm-content" data-content="cat01-01">12 шт или 6 упаковок</div>
+                                        <div class="frm-info frm-content" data-content="cat01-02">Доступно на складе 100 штук</div>
+                                        <div class="frm-info frm-content" data-content="cat01-03">Доступно на складе 30 упаковок
+                                        </div>
+                                    </div>
+                                    <div class="tile-total-order-wrap">
+                                        <div class="tile-price-title">Стоимость</div>
+                                        <div class="tile-price" data-unit="₽">22 200</div>
+                                    </div>
+                                    <a href="" class="btn-action-ico button-delete ico-del"></a>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="item-wrap">
+                                <div class="item-tile-catalog tile-cart">
+                                    <!-- <a href="" class="tile-link"></a> -->
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-contain">
+                                            <img src="./img/cart.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-top-wrap">
+                                        <div class="tile-sticker">-40%</div>
+                                        <a href="" class="btn-action-ico ico-fav button-toggle js-btn-tgl"></a>
+                                    </div>
+                                    <div class="tile-size-wrap">
+                                        <div class="tile-size">120x60 см</div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-title-wrap">
+                                            <div class="tile-title">Керамогранит Italon Терравива Грэй Керамогранит Italon Терравива Грэй</div>
+                                        </div>
+                                        <div class="tile-features-wrap">
+                                            <div class="tile-feature-wrap">
+                                                <div class="tile-feature-title">арт. 610015000489</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-price-title">Цена</div>
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price-inner">
+                                            <div class="tile-price" data-unit=" ₽/м2">2 200</div>
+                                            <div class="tile-price price-old" data-unit=" ₽ м²  ">30 514</div>
+                                            <div class="tile-sticker">Скидка 40%</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-form-wrap">
+                                        <div class="frm-select-panel">
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat02" id="cat02-01" data-content="cat02-01" checked>
+                                                <label for="cat02-01">м2</label>
+                                            </div>
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat02" id="cat02-02" data-content="cat02-02">
+                                                <label for="cat02-02">штуки</label>
+                                            </div>
+                                            <div class="frm-select-button">
+                                                <input type="radio" name="cat02" id="cat02-03" data-content="cat02-03">
+                                                <label for="cat02-03">упаковки</label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field-counter js-counter">
+                                            <button class="js-button-counter-plus btn button-light button-plus"></button>
+                                            <button class="js-button-counter-minus btn button-light button-minus"></button>
+                                            <div class="form-input">
+                                                <div class="form-input-value js-input-counter">1</div>
+                                                <div class="form-input-unit frm-content" data-content="cat02-01">м2</div>
+                                                <div class="form-input-unit frm-content" data-content="cat02-02">штуки</div>
+                                                <div class="form-input-unit frm-content" data-content="cat02-03">упаковки</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm-info frm-content" data-content="cat02-01">12 шт или 6 упаковок</div>
+                                        <div class="frm-info frm-content" data-content="cat02-02">Доступно на складе 100 штук</div>
+                                        <div class="frm-info frm-content" data-content="cat02-03">Доступно на складе 30 упаковок
+                                        </div>
+                                    </div>
+                                    <div class="tile-total-order-wrap">
+                                        <div class="tile-price-title">Стоимость</div>
+                                        <div class="tile-price" data-unit="₽">22 200</div>
+                                    </div>
+                                    <a href="" class="btn-action-ico button-delete ico-del"></a>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                        </div>
+                    </div>
+                    <!--/tiles-cart-box-->
+                </div>
+                <div class="popup-footer-wrap">
+                    <div class="popup-submit-wrap">
+                        <div class="total-wrap">
+                            <div class="total-title">Итого</div>
+                            <div class="total-price">
+                                <div class="elm-price" data-unit=" ₽">30 514</div>
+                            </div>
+                        </div>
+                        <div class="submit-wrap">
+                            <a href="" class="btn">Оформить заказ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
 
     </div>
     <!-- /wrap -->

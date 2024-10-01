@@ -1,3 +1,28 @@
+//frm field-input
+function checkInputFields() {
+	const formInputs = document.querySelectorAll('.frm-field-input .form-input');
+  
+	formInputs.forEach(inputField => {
+	  const frmFieldInput = inputField.closest('.frm-field-input');
+  
+	  if (inputField.value.trim() !== '') {
+		frmFieldInput.classList.add('inp-active');
+	  }
+	});
+  }
+document.addEventListener('input', function(event) {
+	if (event.target.closest('.frm-field-input') && event.target.classList.contains('form-input')) {
+	  const inputField = event.target;
+	  const frmFieldInput = inputField.closest('.frm-field-input');
+  
+	  if (inputField.value.length > 0) {
+		frmFieldInput.classList.add('inp-active');
+	  } else {
+		frmFieldInput.classList.remove('inp-active');
+	  }
+	}
+  });
+
 //fixed header
 let header = document.querySelector(".header");
 let menu = document.querySelector(".header .menu-inner-wrap");
@@ -505,7 +530,6 @@ const swiperSliderPhoto = new Swiper(".slider-photo .swiper", {
 });
 
 
-
 //slider media thumbs preview
 const swiperMediaPreview = new Swiper(".slider-media-thumbs .swiper",
 {
@@ -538,3 +562,9 @@ const swiperMediaMain = new Swiper(".slider-media-main .swiper",
 	swiper: swiperMediaPreview,
 	},
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+	checkInputFields();
+  });
+
+

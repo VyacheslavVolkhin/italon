@@ -25,6 +25,15 @@
 			padding-bottom: 4px;
 		}
 	}
+	&.tile-cart {
+		.tile-price {
+			&.price-old {
+				font-size: 14px;
+				color: #676767;
+				align-self: flex-end;
+			}
+		}
+	}
 	&.tile-cart-out {
 		.frm-info {
 			color: #F38403;
@@ -64,8 +73,23 @@
 			padding-top: 12px;
 		}
 	}
+	
 	&:hover {
 		background-color: var(--clr-bg);
+	}
+	.tile-total-order-wrap {
+		display: block;
+		width: 100%;
+		flex-shrink: 0;
+	}
+	.tile-price-title {
+		display: block;
+		font-size: 14px;
+		line-height: 1.4;
+		color: var(--clr-title);
+		margin-bottom: 5px;
+		width: 100%;
+		flex-shrink: 0;
 	}
 	.tile-buttons-wrap {
 		display: flex;
@@ -153,6 +177,13 @@
 			width: 24;height: 24;
 			flex-shrink: 0;
 			margin-right: -8px;
+		}
+		.tile-sticker {
+			height: 26px;
+			line-height: 26px;
+			border: none;
+			padding: 0 8px;
+			font-size: 12px;
 		}
 	}
 	.tile-price-inner {
@@ -257,6 +288,11 @@
 		line-height: 1.3;
 		color: var(--clr-light);
 		margin-top: 4px;
+	}
+	.button-delete {
+		position: absolute;
+		top: 0;right: 0;
+		z-index: 7;
 	}
 }
 .item-tile-service-info {
@@ -575,6 +611,36 @@
 	min-height: 56px;
 	border: 1px solid var(--clr-border);
 }
+@media (max-width: 1023px) {
+	.item-tile-catalog {
+		&.tile-cart {
+			padding-top: 10px;
+			.tile-top-wrap {
+				padding: 0;
+				top: auto;
+				bottom: 0;
+				padding: 12px 16px;
+				.tile-sticker {
+					display: none;
+				}
+			}
+			.tile-title-wrap {
+				border-bottom: none;
+			}
+			.tile-features-wrap {
+				padding-top: 0;
+				margin-bottom: 10px;
+			}
+			.tile-info-wrap {
+				padding-top: 0;
+			}
+			.tile-photo {
+				height: 130px;
+				aspect-ratio: inherit;
+			}
+		}
+	}
+}
 @media (min-width: 1024px) {
 	.item-tile-catalog {
 		padding-left: 3.1rem;
@@ -582,6 +648,67 @@
 		padding-bottom: 24px;
 		font-size: 16px;
 		line-height: 1.4;
+		&.tile-cart {
+			border: none;
+			padding: 0 45px 24px 33rem;
+			display: block;
+			align-items: stretch;
+			flex-direction: row;
+			min-height: 33rem;
+			&:hover {
+				background: none;
+			}
+			.tile-photo-wrap {
+				position: absolute;
+				top: 0;bottom: 0;left: 0;
+				padding: 0;
+				margin: 0;
+				flex-shrink: 0;
+			}
+			.tile-top-wrap {
+				right: auto;
+				padding-right: 12px;
+				.btn-action-ico, .tile-sticker {
+					margin-left: 6px;
+				}
+			}
+			.tile-photo-wrap, .tile-top-wrap {
+				width: 33rem;
+			}
+			.tile-info-wrap {
+				width: 100%;
+				padding: 12px 0 0 0;
+				margin: 0 0 12px 0;
+			}
+			.tile-title-wrap {
+				border-bottom: none;
+			}
+			.tile-features-wrap {
+				padding-top: 0;
+			}
+			.tile-price-wrap {
+				.tile-sticker {
+					display: none;
+				}
+			}
+			.tile-form-wrap {
+				max-width: 304px;
+			}
+			.tile-title {
+				font-size: 22px;
+				font-weight: 500;
+				line-height: 30px;
+				margin-bottom: 5px;
+			}
+			.tile-photo {
+				aspect-ratio: inherit;
+				position: absolute;
+				top: 15px;
+				bottom: 15px;
+				left: 15px;
+				right: 15px;
+			}
+		}
 		&.tile-second {
 			.tile-photo {
 				aspect-ratio: 350/260;
@@ -614,6 +741,9 @@
 		}
 		.tile-cart-wrap {
 			padding-bottom: 0;
+		}
+		.button-delete {
+			top: 8px;right: 8px;
 		}
 	}
 	.item-tile-service-info {
@@ -658,6 +788,21 @@
 		.tile-date {
 			font-size: (16/18em);
 			line-height: 1.4;
+		}
+	}
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+	.content-wrap {
+		.item-tile-catalog {
+			&.tile-cart {
+				padding-left: 200px;
+				.tile-photo-wrap, .tile-top-wrap {
+					width: 200px;
+				}
+				.tile-title {
+					font-size: 20px;
+				}
+			}
 		}
 	}
 }
