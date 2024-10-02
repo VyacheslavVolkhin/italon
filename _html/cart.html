@@ -553,11 +553,6 @@
 												<p>Лен. обл, Всеволожский р-н, д. Новосаратовка, промзона «Уткина Заводь», д.4, корп.2, пар. No3</p>
 											</div>
 										</div>
-										<div class="frm-field field-text">
-											<div class="page-subtitle">Пункт самовывоза Tochka</div>
-											<p class="text-large">Москва, Мариинская улица, дом 43</p>
-											<a href="" class="btn button-border button-gray">Изменить адрес</a>
-										</div>
 										<div class="frm-row">
 											<div class="frm-field">
 												<div class="frm-field-desc">При оформлении заказа с ПН по ПТ до 16:00, его можно забрать со склада на следующий день с 12:00 до 17:00. СБ/ВС – выходные дни.</div>
@@ -571,7 +566,7 @@
 													<input type="text" class="form-input" value="Москва, Мариинская улица, дом 43">
 													<div class="field-input-title">Адрес</div>
 												</div>
-												<div class="frm-field-message ms-info">Доставка осуществляется по СПБ и ЛО. Ознакомится с <a href="" class="link-main">зонами доставки</a></div>
+												<div class="frm-field-message ms-info">Доставка осуществляется по СПБ и ЛО. Ознакомится с <a href="" class="link-main js-popup-open" data-popup="popup-map">зонами доставки</a></div>
 											</div>
 										</div>
 										<div class="frm-row">
@@ -595,37 +590,36 @@
 												<div class="frm-field-input">
 													
 													<select class="form-input">
-														<option value="">10:00 - 19: 00</option>
-														<option value="">10:00 - 19: 00</option>
-														<option value="">10:00 - 19: 00</option>
-														<option value="">10:00 - 19: 00</option>
-														<option value="">10:00 - 19: 00</option>
+														<option value="">10:00 - 16:00</option>
+														<option value="">16:00 - 20:00</option>
 													</select>
-													<div class="field-input-title">Интервал доставки</div>
+													<div class="field-input-title">Желаемый интервал доставки</div>
 												</div>
 											</div>
 										</div>
 										<div class="frm-row">
 											<div class="frm-field">
 												<div class="frm-select">
-													<input type="checkbox" id="floor" checked>
+													<input type="checkbox" id="floor" checked data-content="form02">
 													<label for="floor">Нужен подъем на этаж</label>
 												</div>
 											</div>
 										</div>
-										<div class="frm-row">
-											<div class="frm-field">
-												<div class="frm-field-input">
-													<input type="text" class="form-input" value="12">
-													<div class="field-input-title">Какой у вас этаж</div>
+										<div class="frm-content" data-content="form02">
+											<div class="frm-row">
+												<div class="frm-field">
+													<div class="frm-field-input">
+														<input type="text" class="form-input" value="12">
+														<div class="field-input-title">Какой у вас этаж</div>
+													</div>
 												</div>
 											</div>
-										</div>
-										<div class="frm-row">
-											<div class="frm-field">
-												<div class="frm-select">
-													<input type="checkbox" id="lift">
-													<label for="lift">Нет лифта</label>
+											<div class="frm-row">
+												<div class="frm-field">
+													<div class="frm-select">
+														<input type="checkbox" id="lift">
+														<label for="lift">Нет лифта</label>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -645,9 +639,11 @@
 								<!--frm-section-wrap-->
 								<div class="frm-section-wrap">
 									<div class="frm-section-title">Способ оплаты</div>
-									<div class="frm-row">
-										<div class="frm-field">
-											<div class="frm-field-desc">Доставка осуществляется только после полной предоплаты заказа</div>
+									<div class="frm-content" data-content="form01-02">
+										<div class="frm-row">
+											<div class="frm-field">
+												<div class="frm-field-desc">Доставка осуществляется только после полной предоплаты заказа</div>
+											</div>
 										</div>
 									</div>
 									<div class="frm-row">

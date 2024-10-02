@@ -120,7 +120,7 @@ for (i = 0;i < tglButtons.length;i++) {
 	tglButtons[i].addEventListener('click', function(e) {
 		this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
 		e.preventDefault()
-		e.stopPropagation()
+		//e.stopPropagation()
 		return false
 	})
 }
@@ -566,5 +566,4 @@ const swiperMediaMain = new Swiper(".slider-media-main .swiper",
 document.addEventListener('DOMContentLoaded', function() {
 	checkInputFields();
   });
-
 
