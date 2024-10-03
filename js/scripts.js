@@ -204,15 +204,19 @@ inputCounters.forEach((input, i) => {
 	const minusButton = minusButtons[i
 	];
 
-	plusButton.addEventListener("click", (event) => {
-		event.preventDefault();
-		increaseCounter(input);
-	});
+	if (plusButton) {
+		plusButton.addEventListener("click", (event) => {
+			event.preventDefault();
+			increaseCounter(input);
+		});
+	}
 
-	minusButton.addEventListener("click", (event) => {
-		event.preventDefault();
-		decreaseCounter(input);
-	});
+	if (minusButton) {
+		minusButton.addEventListener("click", (event) => {
+			event.preventDefault();
+			decreaseCounter(input);
+		});
+	}
 });
 inputCounters.forEach(input => updateButtonState(input));
 

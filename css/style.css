@@ -3304,6 +3304,13 @@ body.popup-open {
 .popup-box .tiles-cart-box {
   margin: 0;
 }
+.popup-form .popup-box {
+  width: 702px;
+  padding-bottom: 8px;
+}
+.popup-form .popup-box .popup-content-wrap {
+  padding-bottom: 0;
+}
 .popup-map-box {
   height: 100%;
   width: 100%;
@@ -3313,7 +3320,39 @@ body.popup-open {
   overflow: hidden;
   max-height: 100%;
 }
+.popup-form-box .frm-field {
+  margin-bottom: 16px;
+  padding: 0 8px;
+  width: 100%;
+}
+.popup-form-box .frm-row,
+.popup-form-box .frm-row-submit {
+  margin: 0 -8px;
+}
+.popup-form-box .field-button {
+  width: auto;
+}
+.popup-form-box .frm-field-input textarea.form-input {
+  height: 120px;
+}
+.popup-form-box .frm-field-input {
+  border-color: #B8BDCA;
+}
+.popup-form-box .frm-row-submit {
+  padding-top: 16px;
+}
 @media (max-width: 1023px) {
+  .popup-form-box .frm-row,
+  .popup-form-box .frm-row-submit {
+    margin: 0 -4px;
+  }
+  .popup-form-box .frm-field {
+    margin-bottom: 12px;
+    padding: 0 4px;
+  }
+  .popup-form-box .field-button .btn {
+    padding: 0 16px;
+  }
   .filter-show {
     overflow: hidden;
   }
