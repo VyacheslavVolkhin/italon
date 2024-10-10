@@ -179,46 +179,120 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // field counter
-const inputCounters = document.querySelectorAll(".js-input-counter");
-const plusButtons = document.querySelectorAll(".js-button-counter-plus");
-const minusButtons = document.querySelectorAll(".js-button-counter-minus");
-function increaseCounter(input) {
-	input.innerText = parseInt(input.innerText, 10) + 1;
-	updateButtonState(input);
-}
-function decreaseCounter(input) {
-	if (input.innerText > 1) {
-		input.innerText = parseInt(input.innerText,
-		10) - 1;
-		updateButtonState(input);
-	}
-}
-function updateButtonState(input) {
-	const buttonMinus = input.closest(".js-counter").querySelector(".js-button-counter-minus");
-	buttonMinus.classList.toggle("button-disabled", parseInt(input.innerText,
-	10) <= 1);
-}
-inputCounters.forEach((input, i) => {
-	const plusButton = plusButtons[i
-	];
-	const minusButton = minusButtons[i
-	];
+document.addEventListener('DOMContentLoaded', () => {
+	const counters = document.querySelectorAll('.js-counter');
 
-	if (plusButton) {
-		plusButton.addEventListener("click", (event) => {
-			event.preventDefault();
-			increaseCounter(input);
-		});
-	}
+	counters.forEach(counter => {
+		const btnPlus = counter.querySelector('.js-button-counter-plus');
+		const btnMinus = counter.querySelector('.js-button-counter-minus');
+		const input = counter.querySelector('.js-input-counter');
 
-	if (minusButton) {
-		minusButton.addEventListener("click", (event) => {
-			event.preventDefault();
-			decreaseCounter(input);
+		const dataUnit = input.dataset.unit || '';
+		const dataStepRaw = input.dataset.step || '1';
+		const dataStep = parseFloat(dataStepRaw.replace(',', '.'));
+		const dataMin = parseFloat(input.dataset.min) || 0;
+		const dataMax = parseFloat(input.dataset.max) || Infinity;
+
+		const decimalSeparator = dataStepRaw.includes(',') ? ',' : '.';
+
+		const parseValue = (val) => {
+			return parseFloat(val.replace(dataUnit, '').trim().replace(',', '.')) || dataMin;
+		};
+
+		const formatValue = (val) => {
+			const decimals = (dataStepRaw.split(decimalSeparator)[1] || '').length;
+			return val.toFixed(decimals) + dataUnit;
+		};
+
+		const updateButtons = (val) => {
+			if (val <= dataMin) {
+				btnMinus.classList.add('button-disabled');
+			} else {
+				btnMinus.classList.remove('button-disabled');
+			}
+
+			if (val >= dataMax) {
+				btnPlus.classList.add('button-disabled');
+			} else {
+				btnPlus.classList.remove('button-disabled');
+			}
+		};
+
+		let currentValue = parseValue(input.value);
+		currentValue = Math.max(dataMin, Math.min(currentValue, dataMax));
+		input.value = formatValue(currentValue);
+		updateButtons(currentValue);
+
+		btnPlus.addEventListener('click', () => {
+			if (btnPlus.classList.contains('button-disabled')) return;
+			currentValue = parseFloat((currentValue + dataStep).toFixed(10));
+			if (currentValue > dataMax) currentValue = dataMax;
+			input.value = formatValue(currentValue);
+			updateButtons(currentValue);
 		});
-	}
+
+		btnMinus.addEventListener('click', () => {
+			if (btnMinus.classList.contains('button-disabled')) return;
+			currentValue = parseFloat((currentValue - dataStep).toFixed(10));
+			if (currentValue < dataMin) currentValue = dataMin;
+			input.value = formatValue(currentValue);
+			updateButtons(currentValue);
+		});
+
+		input.addEventListener('focus', () => {
+			input.value = parseValue(input.value).toString().replace('.', decimalSeparator);
+		});
+
+		input.addEventListener('blur', () => {
+			let val = parseFloat(input.value.replace(',', '.'));
+			if (isNaN(val)) {
+				val = dataMin;
+			}
+			val = Math.max(dataMin, Math.min(val, dataMax));
+
+			const stepCount = Math.round((val - dataMin) / dataStep);
+			val = parseFloat((dataMin + stepCount * dataStep).toFixed(10));
+
+			input.value = formatValue(val);
+			currentValue = val;
+			updateButtons(currentValue);
+		});
+
+		input.addEventListener('input', (e) => {
+			let value = input.value;
+
+			const regex = dataStepRaw.includes(',') ?
+				/[^0-9,]/g :
+				/[^0-9.]/g;
+			value = value.replace(regex, '');
+
+			const parts = value.split(decimalSeparator);
+			if (parts.length > 2) {
+				value = parts[0] + decimalSeparator + parts.slice(1).join('');
+			}
+
+			input.value = value;
+		});
+
+		input.addEventListener('change', () => {
+			let val = parseFloat(input.value.replace(',', '.'));
+			if (isNaN(val)) {
+				val = dataMin;
+			}
+			val = Math.max(dataMin, Math.min(val, dataMax));
+
+			const remainder = (val - dataMin) / dataStep;
+			if (!Number.isInteger(remainder)) {
+				val = dataMin + Math.round(remainder) * dataStep;
+			}
+
+			input.value = formatValue(val);
+			currentValue = val;
+			updateButtons(currentValue);
+		});
+	});
 });
-inputCounters.forEach(input => updateButtonState(input));
+
 
 //js popup wrap
 const togglePopupButtons = document.querySelectorAll(".js-btn-popup-toggle");

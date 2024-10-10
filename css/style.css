@@ -5138,6 +5138,10 @@ select.form-input:required:invalid {
   top: 0;
   left: 0;
 }
+.frm-field-counter .btn.button-disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
 .frm-field-counter .button-plus {
   left: auto;
   right: 0;
