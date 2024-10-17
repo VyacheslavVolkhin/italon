@@ -114,14 +114,23 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 
-//btn tgl
+//btn tgl and add
 let tglButtons = document.querySelectorAll('.js-btn-tgl')
+let addButtons = document.querySelectorAll('.js-btn-add')
 for (i = 0;i < tglButtons.length;i++) {
 	tglButtons[i].addEventListener('click', function(e) {
 		this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
 		e.preventDefault()
-		//e.stopPropagation()
 		return false
+	})
+}
+for (i = 0;i < addButtons.length;i++) {
+	addButtons[i].addEventListener('click', function(e) {
+		if (!this.classList.contains('active')) {
+			this.classList.add('active');
+			e.preventDefault()
+			return false
+		}
 	})
 }
 

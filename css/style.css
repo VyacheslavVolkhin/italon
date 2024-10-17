@@ -4722,6 +4722,26 @@ select.form-input:required:invalid {
   letter-spacing: -0.11px;
   margin-left: 8px;
 }
+.btn.button-active-add .button-title:before,
+.btn.button-active-toggle .button-title:before {
+  content: attr(data-title);
+}
+.btn.button-active-add .button-ico-active,
+.btn.button-active-toggle .button-ico-active {
+  display: none;
+}
+.btn.button-active-add.active .button-title:before,
+.btn.button-active-toggle.active .button-title:before {
+  content: attr(data-title-active);
+}
+.btn.button-active-add.active:has(.button-ico-active) .button-ico,
+.btn.button-active-toggle.active:has(.button-ico-active) .button-ico {
+  display: none;
+}
+.btn.button-active-add.active:has(.button-ico-active) .button-ico-active,
+.btn.button-active-toggle.active:has(.button-ico-active) .button-ico-active {
+  display: block;
+}
 .btn-action-ico {
   min-width: 0;
   border-radius: 0;
