@@ -2200,7 +2200,8 @@ html {
   margin-bottom: 40px;
   margin-bottom: 4rem;
 }
-.article-box .text-inner-wrap + .text-inner-wrap {
+.article-box .text-inner-wrap + .text-inner-wrap,
+.article-box .text-inner-wrap + .tbl-scroll-wrap {
   margin-top: 120px;
   margin-top: 12rem;
 }
