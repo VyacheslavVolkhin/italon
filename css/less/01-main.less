@@ -208,6 +208,37 @@ h6, .h6-title {
 .text-center, .title-center {
     text-align: center;
 }
+.tbl-scroll-wrap {
+	margin-bottom: var(--mainMB);
+	&:last-child {
+		margin-bottom: 0;
+	}
+	table {
+		width: 100%;
+		margin: 0;
+		font-size: 1em;
+		line-height: 1.5;
+		color: inherit;
+		th, td {
+			text-align: left;
+			font-weight: 500;
+			vertical-align: top;
+			background: #FCFCFC;
+			border: 1px solid var(--clr-border);
+			padding: (21/16em) (20/16em);
+			text-align: left;
+			position: relative;
+			&:has(.elm-helper) {
+				padding-left: calc(1.25em + 32px);
+			}
+		}
+		.elm-helper {
+			position: absolute;
+			top: 50%;left: 1em;
+			margin: -12px 0 0 0;
+		}
+	}
+}
 @media (max-width: 1399px) {
     :root {
         font-size: 9.5px;
@@ -222,6 +253,23 @@ h6, .h6-title {
     :root {
         font-size: 8px;
     }
+	.tbl-scroll-wrap {
+		margin-left: calc(var(--paddingContainer) * -1);
+		margin-right: calc(var(--paddingContainer) * -1);
+		padding-left: var(--paddingContainer);
+		overflow-x: auto;
+		overflow-y: hidden;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+		table {
+			width: 97.6rem;
+			min-width: calc(100dvw - var(--paddingContainer) - var(--paddingContainer));
+		}
+	}
 }
 @media (max-width: 767px) {
     :root {

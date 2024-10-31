@@ -71,6 +71,11 @@ html {
 	&:has(.sticky-panel) {
 		overflow: visible;
 	}
+	&:not(:has(.breadcrumbs-box)) {
+		.page-full {
+			padding-top: 4rem;
+		}
+	}
 }
 .nav,
 .header,
